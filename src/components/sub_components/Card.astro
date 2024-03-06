@@ -16,6 +16,11 @@ const { Title } = Astro.props;
         border-radius: 0;
         height: 260px;
 
+        @media screen and (width <= 1200px){
+            flex-basis: 100%;
+            height: 300px;
+        }
+
         .card-text {
             position: relative;
             z-index: 2;
@@ -27,6 +32,10 @@ const { Title } = Astro.props;
             h4 {
                 color: var(--zion-cc-red);
                 font-size: 40px;
+
+                @media screen and (width <= 1200px){
+                    font-size: 30px;
+                }
             }
         }
     }
