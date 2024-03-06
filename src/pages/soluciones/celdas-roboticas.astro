@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+
+const _array = [
+    ['Celdas de ensamblaje', 'Las celdas de ensamblaje utilizan robots para ensamblar productos de forma precisa y eficiente.'], 
+    ['Celdas de paletización', 'Las celdas de paletización utilizan robots para apilar productos en palets.'], 
+    ['Celdas de pintura', 'Las celdas de pintura utilizan robots para pintar productos de forma uniforme y precisa.'], 
+    ['Celdas de soldadura', 'Las celdas de soldadura utilizan robots para soldar piezas de forma precisa y eficiente.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la automatización inteligente a su alcance" Title="Celdas robóticas" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ayuda a automatizar sus procesos de producción con celdas robóticas personalizadas">
+        <Fragment slot="IntroContent">
+            <p>La automatización de procesos es una tendencia clave en la industria manufacturera. Las celdas robóticas son una forma eficiente y rentable de automatizar tareas repetitivas y peligrosas.</p>
+            <p>ZION ofrece una amplia gama de celdas robóticas para una variedad de aplicaciones, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Celdas robóticas de Zion Automation">
+		<Fragment slot="SectionHTML">
+			<p>Las celdas robóticas de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Mejora de la productividad: Las celdas robóticas pueden aumentar la productividad hasta un 50%.</li>
+                    <li>Reducción de los costos: Las celdas robóticas pueden reducir los costos de mano de obra, materiales y energía.</li>
+                    <li>Mejora de la calidad: Las celdas robóticas pueden mejorar la calidad de los productos al reducir los defectos.</li>
+                    <li>Aumento de la seguridad: Las celdas robóticas pueden ayudar a reducir los riesgos para la seguridad de los trabajadores.</li>
+                </ul>
+            </p>
+            <p>Si está buscando una manera de automatizar sus procesos de producción y mejorar la eficiencia, la calidad y la seguridad de sus operaciones, las celdas robóticas de ZION son una solución que vale la pena considerar.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las celdas robóticas de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

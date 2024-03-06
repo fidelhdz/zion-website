@@ -1,0 +1,28 @@
+---
+interface PROPS {
+    subTitle?: string;
+    Title: string;
+}
+import SectionTitles from "./sub_components/SectionTitles.astro";
+
+const { subTitle = "", Title } = Astro.props;
+---
+
+<section class="zion-wide-section">
+        <div class="row">
+            <div class="col-12">
+                <SectionTitles subTitle={subTitle} Title={Title} />
+            </div>
+        </div>
+
+        <div class="inner-content">
+            <slot name="SectionHTML" />
+        </div>
+</section>
+
+<style lang="scss">
+    .inner-content {
+        display: block;
+        padding: 40px 0;
+    }
+</style>

@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import Addresses from "../components/addresses.astro";
+import ContactItems from "../components/ContactItems.astro";
+import TextOnHeader from "../components/TextOnHeader.astro";
+import SectionContent from "../components/SectionContent.astro";
+import Footer from "../components/Footer.astro";
+import SectionWideContent from "../components/SectionWideContent.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+<Layout title="ZION Automation: Soluciones de automatización industrial" desc="Somos la empresa líder en soluciones de automatización industrial en el norte de México y el sur de Estados Unidos. Ofrecemos una amplia gama de soluciones, desde celdas robóticas hasta sistemas de pruebas, que pueden ayudar a las empresas a mejorar su eficiencia, productividad y calidad.">
+	<header>
+		<NavBar linkColor="#131313" />
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-xl-3">
+					<TextOnHeader subTitle="Automation Factory" Title="Diseño y fabricación de maquinaria y equipo de proposito especial" />
+				</div>
+			</div>
+		</div>
+		
+		<Addresses />
+		<ContactItems />
+	</header>
+
+	<SectionContent subTitle="Soluciones de automatización industrial" Title="ZION Automation">
+		<Fragment slot="SectionHTML">
+			<p>
+				Somos la empresa líder en soluciones de automatización industrial en el norte de México y el sur de Estados Unidos. Ofrecemos una amplia gama de soluciones, desde celdas robóticas hasta sistemas de pruebas, que pueden ayudar a las empresas a mejorar su eficiencia, productividad y calidad.
+			</p>
+			<p>
+				<a href="#">Contáctenos</a> hoy mismo para obtener más información sobre cómo podemos ayudarle a alcanzar sus objetivos de automatización.
+			</p>
+		</Fragment>
+	</SectionContent>
+
+
+
+	<SectionWideContent subTitle="Nuestro trabajo habla por si solo" Title="Nuestros Clientes">
+		<Fragment slot="SectionHTML">
+			<div class="row">
+				<div class="col-12">
+					<ul class="logos">
+						<li><img src="/assets/images/costumers/lear_logo.svg" width="236" alt="Lear corporation"></li>
+						<li><img src="/assets/images/costumers/acuity_logo.svg" width="236" alt="AcuityBrands"></li>
+						<li><img src="/assets/images/costumers/borgw_logo.svg" width="236" alt="BorgWarner"></li>
+						<li><img src="/assets/images/costumers/polaris_logo.svg" width="236" alt="Polaris Industries Inc."></li>
+						<li><img src="/assets/images/costumers/mahle_logo.svg" width="236" alt="Mahle"></li>
+						<li><img src="/assets/images/costumers/rheem_logo.svg" width="236" alt="Rheem"></li>
+						<li><img src="/assets/images/costumers/tupy_logo.svg" width="236" alt="TUPY"></li>
+						<li><img src="/assets/images/costumers/nissan_logo.svg" width="236" alt="Nissan"></li>
+					</ul>
+				</div>
+			</div>
+		</Fragment>
+	</SectionWideContent>
+
+	<SectionWideContent subTitle="La Unión hace la fuerza" Title="Socios Comerciales">
+		<Fragment slot="SectionHTML">
+			<div class="row">
+				<ul class="logos">
+					<li><img src="/assets/images/partners/seer_logo.svg" width="236" alt="SEER Robotics"></li>
+					<li><img src="/assets/images/partners/elite_logo.svg" width="236" alt="ELITE ROBOT"></li>
+					<li><img src="/assets/images/partners/iai_logo.svg" width="236" alt="IAI, Quality and Innovation"></li>
+					<li><img src="/assets/images/partners/abb_logo.svg" width="236" alt="ABB"></li>
+				</ul>
+			</div>
+		</Fragment>
+	</SectionWideContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

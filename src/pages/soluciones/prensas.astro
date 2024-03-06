@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Servoprensas', 'Las servoprensas son prensas que utilizan servomotores para controlar la fuerza de prensado. Son precisas y eficientes, y se utilizan en una variedad de aplicaciones, como la fabricación de automóviles, la electrónica y la maquinaria.'], 
+    ['Prensas neumáticas', 'Las prensas neumáticas son prensas que utilizan aire comprimido para controlar la fuerza de prensado. Son relativamente económicas y fáciles de usar, y se utilizan en una variedad de aplicaciones, como la fabricación de metales, la madera y el plástico.'], 
+    ['Prensas hidráulicas', 'Las prensas hidráulicas son prensas que utilizan aceite hidráulico para controlar la fuerza de prensado. Son potentes y versátiles, y se utilizan en una variedad de aplicaciones, como la fabricación de automóviles, la construcción y la minería.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la fuerza que impulsa la fabricación" Title="Prensas" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ofrece una amplia gama de prensas para satisfacer sus necesidades específicas">
+        <Fragment slot="IntroContent">
+            <p>Las prensas son una parte esencial de cualquier proceso de fabricación. Se utilizan para una variedad de tareas, como la estampación, el troquelado, el punzonado y el conformado.</p>
+            <p>ZION ofrece una amplia gama de prensas para satisfacer sus necesidades específicas, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Servicios de control de calidad de Zion Automation">
+		<Fragment slot="SectionHTML">
+			<p>Las prensas de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Precisión: Las prensas de ZION son precisas y pueden producir piezas con tolerancias estrechas.</li>
+                    <li>Eficiencia: Las prensas de ZION son eficientes y pueden producir piezas rápidamente.</li>
+                    <li>Versatilidad: Las prensas de ZION son versátiles y pueden utilizarse en una variedad de aplicaciones.</li>
+                </ul>
+            </p>
+            <p>Si está buscando una prensa que le ayude a mejorar la precisión, la eficiencia y la versatilidad de su producción, ZION es la opción ideal para usted.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las prensas de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

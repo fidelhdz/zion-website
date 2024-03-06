@@ -1,0 +1,35 @@
+---
+interface PROPS {
+    Title: string;
+}
+const { Title } = Astro.props;
+---
+
+<section class="zion-section-intro">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10 text-center">
+                <h4>{ Title }</h4>
+                <slot name="IntroContent" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .zion-section-intro {
+        padding: 90px 0 30px;
+
+        h4 {
+            color: var(--zion-cc-red);
+            margin-bottom: 30px;
+            font-family: var(--zion-ff-georgia);
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        p {
+            color: var(--zion-cc-gray);
+        }
+    }
+</style>

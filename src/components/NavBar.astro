@@ -1,0 +1,66 @@
+---
+interface PROPS {
+    linkColor?: string;
+}
+const {linkColor = '#FFFFFF'} = Astro.props;
+---
+<nav>
+    <ul>
+        <li><a href="/conocenos">Conócenos</a></li>
+        <li><a href="/soluciones">Soluciones</a></li>
+        <li>
+            <a href="/">
+                <div class="logo-top">
+                    <img src="/assets/images/top_logo.svg" width="82" alt="ZION Corp Logo">
+                </div>
+            </a>
+        </li>
+        <li><a href="/ubicaciones">Ubicaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<style lang="scss" define:vars={{ linkColor }}>
+    nav {
+        display: block;
+        text-align: center;
+        padding: 30px 0;
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 90px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: var(--linkColor);
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-family: var(--zion-ff-avenir);
+                    font-weight: 600;
+                    letter-spacing: 1px;
+
+                    .logo-top {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        text-align: center;
+                    }
+
+                    &:hover {
+                        color: #F62F42;
+                    }
+                }
+            }
+        }
+    }
+</style>

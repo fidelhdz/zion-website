@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Estaciones de torque', 'Las estaciones de torque se utilizan para aplicar una fuerza específica a un componente o ensamblaje.'], 
+    ['Estaciones de ensamblaje', 'Las estaciones de ensamblaje se utilizan para ensamblar productos de forma precisa y eficiente.'], 
+    ['Estaciones de ensamble', 'Las estaciones de ensamble se utilizan para unir piezas o componentes para crear un producto completo.'], 
+    ['Estaciones de trabajo', 'Las estaciones de trabajo se utilizan para proporcionar un espacio de trabajo ergonómico y eficiente para los empleados.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la automatización a su medida" Title="Estaciones personalizadas" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ayuda a diseñar y fabricar estaciones personalizadas que se adapten a sus necesidades específicas">
+        <Fragment slot="IntroContent">
+            <p>Las estaciones personalizadas son una solución ideal para empresas que necesitan un espacio de trabajo eficiente y seguro para sus empleados. ZION ofrece una amplia gama de estaciones personalizadas para una variedad de aplicaciones, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Estaciones personalizadas de ZION Automation">
+		<Fragment slot="SectionHTML">
+			<p>Las estaciones personalizadas de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Eficiencia: Las estaciones personalizadas están diseñadas para satisfacer las necesidades específicas de su empresa, lo que puede ayudar a aumentar la eficiencia.</li>
+                    <li>Seguridad: Las estaciones personalizadas se pueden diseñar para cumplir con los requisitos de seguridad de su empresa, lo que puede ayudar a proteger a sus empleados.</li>
+                    <li>Personalización: Las estaciones personalizadas se pueden diseñar para adaptarse a sus necesidades específicas, lo que puede ayudar a mejorar la productividad y la calidad.</li>
+                </ul>
+            </p>
+            <p>Si está buscando una manera de mejorar la eficiencia, la seguridad y la productividad de sus operaciones, las estaciones personalizadas de ZION son una solución que vale la pena considerar.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las estaciones personalizadas de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Ingeniería de control y programación', 'Los ingenieros de control y programación se especializan en el diseño, desarrollo e implementación de sistemas de control automático.'], 
+    ['Ingeniería eléctrica', 'Los ingenieros eléctricos se especializan en el diseño, instalación y mantenimiento de sistemas eléctricos.'], 
+    ['Ingeniería mecánica', 'Los ingenieros mecánicos se especializan en el diseño, fabricación y mantenimiento de sistemas mecánicos.'], 
+    ['Ingeniería inversa y desarrollo de ingeniería', 'Los ingenieros de ingeniería inversa se especializan en el análisis de sistemas existentes para comprender su funcionamiento y los ingenieros de desarrollo de ingeniería se especializan en el desarrollo de nuevos productos y procesos.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="el futuro de las operaciones" Title="Soluciones de ingeniería" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ofrece una amplia gama de servicios de ingeniería para satisfacer sus necesidades específicas">
+        <Fragment slot="IntroContent">
+            <p>La ingeniería es la base de cualquier empresa exitosa. Los ingenieros son responsables de diseñar, fabricar y mantener los productos y procesos que hacen que las empresas funcionen.</p>
+            <p>ZION ofrece una amplia gama de servicios de ingeniería para satisfacer sus necesidades específicas, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Soluciones de ingeniería de ZION Automation">
+		<Fragment slot="SectionHTML">
+			<p>Las soluciones de ingeniería de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Mejora de la eficiencia: Las soluciones de ingeniería de ZION pueden ayudar a mejorar la eficiencia de los procesos y los productos.</li>
+                    <li>Reducción de los costos: Las soluciones de ingeniería de ZION pueden ayudar a reducir los costos de producción y mantenimiento.</li>
+                    <li>Mejora de la calidad: Las soluciones de ingeniería de ZION pueden ayudar a mejorar la calidad de los productos y procesos.</li>
+                </ul>
+            </p>
+            <p>Si está buscando soluciones de ingeniería que le ayuden a mejorar la eficiencia, reducir los costos y mejorar la calidad, ZION es la opción ideal para usted.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las soluciones de ingeniería de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

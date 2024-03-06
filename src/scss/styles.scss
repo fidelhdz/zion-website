@@ -1,0 +1,196 @@
+@use "astro-breadcrumbs/breadcrumbs.scss";
+
+:root {
+    // COLORS
+    --zion-cc-red: #F62F42;
+    --zion-cc-black: #131313;
+    --zion-cc-gray: #72727D;
+    --zion-cc-white: #ffffff;
+
+    // FONTS
+    --zion-ff-alumni: "Alumni Sans", sans-serif;
+    --zion-ff-avenir: "Avenir Next", sans-serif;
+    --zion-ff-georgia: "Georgia", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 300ms ease-in-out;
+    font-family: var(--zion-ff-avenir);
+}
+
+.site-container {
+    overflow: hidden;
+}
+
+h1, h2, h4 {
+    font-family: var(--zion-ff-alumni);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+
+    @media screen and (width <= 1200px){
+        font-size: 40px;
+    }
+}
+
+h6 {
+    font-family: var(--zion-ff-avenir);
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 0;
+
+    @media screen and (width <= 1200px){
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+header {
+    display: block;
+    position: relative;
+    height: 100svh;
+    width: 100%;
+    background-color: gray;
+
+    &.inner-hero {
+        max-height: 650px;
+        background-color: #020202;
+
+        h6 {
+            color: var(--zion-cc-white);
+
+            &::before {
+                border-top-color: var(--zion-cc-white);
+            }
+        }
+    }
+}
+
+.c-breadcrumbs {
+    padding: 10px 30px;
+    background-color: var(--zion-cc-red);
+    
+    ol {
+        li {
+            color: var(--zion-cc-white);
+
+            &:not(:last-child):after {
+                content: '\00BB';
+            }
+            a {
+                text-transform: capitalize;
+                color: var(--zion-cc-white);
+                margin-right: 16px;
+            }
+        }
+    }
+}
+
+section {
+    position: relative;
+
+    .zion-image-block {
+        position: relative;
+        min-height: 550px;
+
+        @media screen and (width <= 1200px){
+            min-height: 400px;
+        }
+
+        .zion-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/assets/images/back_image.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &.zion-wide-section {
+        padding: 60px;
+        background-color: #F5F5F5;
+
+        @media screen and (width <= 1200px){
+            padding: 60px 30px;
+        }
+
+        ul.logos {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+            li {
+                flex-basis: 20%;
+                text-align: center;
+            }
+        }
+    }
+
+    .content-section-text {
+        padding: 120px 100px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media screen and (width <= 1200px){
+            padding: 60px 30px;
+            left: 0;
+            transform: unset;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--zion-cc-gray);
+
+            ul {
+                li {
+                    color: var(--zion-cc-gray);
+                }
+            }
+
+            a {
+                color: var(--zion-cc-red);
+            }
+        }
+    }
+
+    .dark-section {
+        position: relative;
+        overflow: hidden;
+        background-color: #010101;
+
+        .blur-ball {
+            position: absolute;
+            width: 1000px;
+            height: 1000px;
+            display: block;
+            top: -400px;
+            left: -400px;
+            background: #3c3c3c;
+            background: radial-gradient(circle, #3c3c3c 0%, #010101 60%); 
+        }
+    }
+}
+
+footer {
+    background-color: var(--zion-cc-black);
+    padding: 40px 60px;
+    color: var(--zion-cc-white);
+
+    @media screen and (width <= 1200px){
+        padding: 40px 30px;
+    }
+}

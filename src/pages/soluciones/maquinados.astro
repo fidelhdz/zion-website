@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Maquinados de precisión', 'Los maquinados de precisión se utilizan para producir piezas y componentes con tolerancias estrechas.'], 
+    ['Maquinados convencionales', 'Los maquinados convencionales se utilizan para producir piezas y componentes con tolerancias más amplias.'], 
+    ['Dispositivos para producción', 'ZION diseña y fabrica dispositivos para producción, como fixtures, moldes y troqueles.'], 
+    ['Tratamientos térmicos', 'Los tratamientos térmicos mejoran las propiedades mecánicas de las piezas y componentes.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la precisión y la calidad a su alcance" Title="Maquinados" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ofrece una amplia gama de servicios de maquinados para satisfacer sus necesidades específicas">
+        <Fragment slot="IntroContent">
+            <p>Los maquinados son una parte esencial de cualquier proceso de fabricación. Los servicios de maquinados de ZION le ofrecen la precisión y la eficiencia que necesita su negocio para producir piezas y componentes de alta calidad.</p>
+            <p>ZION ofrece una amplia gama de servicios de maquinados para satisfacer sus necesidades específicas, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Maquinados de Zion Automation">
+		<Fragment slot="SectionHTML">
+			<p>Los servicios de maquinados de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Precisión: Los maquinados de ZION cumplen con los estándares de precisión más estrictos.</li>
+                    <li>Eficiencia: Los maquinados de ZION se realizan de manera eficiente, lo que puede ayudar a reducir los costos.</li>
+                    <li>Calidad: Los maquinados de ZION producen piezas y componentes de alta calidad.</li>
+                </ul>
+            </p>
+            <p>Si está buscando un proveedor de servicios de maquinados que le ofrezca la precisión, la eficiencia y la calidad que necesita su negocio, ZION es la opción ideal para usted.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo los servicios de maquinados de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

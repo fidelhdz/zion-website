@@ -1,0 +1,24 @@
+---
+const { subTitle, Title } = Astro.props;
+---
+<h6>{ subTitle }</h6>
+<h1>{ Title }</h1>
+
+<style lang="scss">
+    h1 {
+        text-transform: uppercase;
+        color: var(--zion-cc-red);
+    }
+    h6 {
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 5px;
+            margin-right: 15px;
+            border-top: 1px solid #555;
+        }
+    }
+</style>

@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Gauges', 'Los gauges son instrumentos de medición que se utilizan para verificar el tamaño, la forma y la tolerancia de las piezas y componentes.'], 
+    ['Calibradores', 'Los calibradores son instrumentos de medición que se utilizan para verificar la precisión de otros instrumentos de medición.'], 
+    ['Dispositivos para chequeo y verificación', 'ZION diseña y fabrica dispositivos para chequeo y verificación, como estaciones de inspección y sistemas de medición automatizados.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la clave para la excelencia" Title="Control de calidad" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ayuda a garantizar la calidad de sus productos y procesos">
+        <Fragment slot="IntroContent">
+            <p>El control de calidad es esencial para cualquier empresa que quiera producir productos y servicios de alta calidad. Los servicios de control de calidad de ZION le ayudan a garantizar la calidad de sus productos y procesos, lo que puede conducir a una mejora de la satisfacción del cliente, la reducción de los costos y la mejora de la competitividad.</p>
+            <p>ZION ofrece una amplia gama de servicios de control de calidad para satisfacer sus necesidades específicas, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Servicios de control de calidad de Zion Automation">
+		<Fragment slot="SectionHTML">
+			<p>Los servicios de control de calidad de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Garantía de calidad: Los servicios de control de calidad de ZION ayudan a garantizar que sus productos y procesos cumplan con los estándares de calidad establecidos.</li>
+                    <li>Reducción de los costos: Los servicios de control de calidad de ZION pueden ayudar a reducir los costos al identificar y corregir los defectos antes de que lleguen al cliente.</li>
+                    <li>Mejora de la competitividad: Los servicios de control de calidad de ZION pueden ayudar a mejorar la competitividad de su empresa al garantizar que sus productos y procesos cumplan con los requisitos de los clientes y las normas industriales.</li>
+                </ul>
+            </p>
+            <p>Si está buscando un proveedor de servicios de control de calidad que le ayude a garantizar la calidad de sus productos y procesos, ZION es la opción ideal para usted.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo los servicios de control de calidad de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

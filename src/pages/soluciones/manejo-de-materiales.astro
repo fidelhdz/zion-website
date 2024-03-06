@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Conveyors', 'Los transportadores son una forma eficiente de mover materiales de un lugar a otro.'], 
+    ['Mesas giratorias', 'Las mesas giratorias son una forma versátil de posicionar materiales para su procesamiento.'], 
+    ['Bowl feeders', 'Los alimentadores de tazón son una forma precisa de alimentar materiales a las máquinas.'], 
+    ['Pick and place', 'Los sistemas de selección y colocación son una forma eficiente de colocar materiales en su lugar.'], 
+    ['Gantries', 'Los pórticos son una forma flexible de mover materiales a grandes alturas o distancias.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="La clave para una cadena de suministro eficiente" Title="Manejo de materiales" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ayuda a automatizar sus procesos de manejo de materiales para mejorar la eficiencia, la productividad y la seguridad">
+        <Fragment slot="IntroContent">
+            <p>El manejo de materiales es una parte esencial de cualquier operación de fabricación. La automatización del manejo de materiales puede ayudar a mejorar la eficiencia, la productividad y la seguridad de sus operaciones.</p>
+            <p>ZION ofrece una amplia gama de soluciones de manejo de materiales automatizadas para una variedad de aplicaciones, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Soluciones de manejo de materiales">
+		<Fragment slot="SectionHTML">
+			<p>Las soluciones de manejo de materiales automatizadas de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Mejora de la eficiencia: La automatización puede ayudar a reducir el tiempo y el esfuerzo necesarios para mover materiales, lo que puede conducir a una mejora de la eficiencia.</li>
+                    <li>Incremento de la productividad: La automatización puede ayudar a aumentar la cantidad de material que se puede mover en un período de tiempo determinado, lo que puede conducir a un aumento de la productividad.</li>
+                    <li>Reducción de los costos: La automatización puede ayudar a reducir los costos de mano de obra, materiales y energía, lo que puede conducir a una mejora de la rentabilidad.</li>
+                    <li>Mejora de la seguridad: La automatización puede ayudar a reducir los riesgos para la seguridad asociados con el manejo manual de materiales, lo que puede conducir a una mejora de la seguridad.</li>
+                </ul>
+            </p>
+            <p>Si está buscando una manera de automatizar sus procesos de manejo de materiales y mejorar la eficiencia, la productividad, la seguridad y la rentabilidad de sus operaciones, las soluciones de manejo de materiales automatizadas de ZION son una solución que vale la pena considerar.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las soluciones de manejo de materiales automatizadas de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

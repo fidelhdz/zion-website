@@ -1,0 +1,43 @@
+<div class="addresses">
+    <ul>
+        <li>Saltillo, Coah</li>
+        <li>Monterrey, NL</li>
+        <li>Cd Juarez Chih</li>
+        <li>El Paso, TX</li>
+    </ul>
+</div>
+
+<style lang="scss">
+    .addresses {
+        display: block;
+        position: absolute;
+        transform: rotateZ(90deg) translateY(-50%);
+        width: 600px;
+        height: 20px;
+        right: calc(1px - 250px);
+        top: 50%;
+
+        @media screen and (width <= 1200px){
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                width: auto;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: white;
+                letter-spacing: 3px;
+            }
+        }
+    }
+</style>

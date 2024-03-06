@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Escáners', 'Los escáneres se utilizan para leer los códigos de barras o RFID que se utilizan para identificar los productos y procesos.'], 
+    ['Impresoras', 'Las impresoras se utilizan para imprimir códigos de barras o RFID en los productos y procesos.'], 
+    ['Micropercusores', 'Los micropercusores se utilizan para grabar información en los productos y procesos.'], 
+    ['Equipos de marcaje láser', 'Los equipos de marcaje láser se utilizan para grabar información en los productos y procesos.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la clave para la transparencia" Title="Trazabilidad" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ayuda a rastrear sus productos y procesos a lo largo de toda su cadena de suministro">
+        <Fragment slot="IntroContent">
+            <p>La trazabilidad es la capacidad de rastrear un producto o proceso a lo largo de toda su cadena de suministro. Es esencial para garantizar la seguridad y la eficiencia de los productos y procesos, y para cumplir con las regulaciones gubernamentales.</p>
+            <p>ZION ofrece una amplia gama de soluciones de trazabilidad para satisfacer sus necesidades específicas, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Soluciones de trazabilidad de Zion Automation">
+		<Fragment slot="SectionHTML">
+			<p>Las soluciones de trazabilidad de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Seguridad: Las soluciones de trazabilidad pueden ayudar a garantizar la seguridad de los productos y procesos al permitirle rastrear su origen y destino.</li>
+                    <li>Eficiencia: Las soluciones de trazabilidad pueden ayudar a mejorar la eficiencia de los productos y procesos al permitirle identificar y solucionar problemas rápidamente.</li>
+                    <li>Cumplimiento: Las soluciones de trazabilidad pueden ayudarle a cumplir con las regulaciones gubernamentales al proporcionar un registro detallado de sus productos y procesos.</li>
+                </ul>
+            </p>
+            <p>Si está buscando una solución de trazabilidad que le ayude a garantizar la seguridad, la eficiencia y el cumplimiento, ZION es la opción ideal para usted.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las soluciones de trazabilidad de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

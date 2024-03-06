@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import CTAButton from "../../components/CTAButton.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="Mejore su eficiencia, productividad y calidad con la ayuda de ZION" Title="La automatización inteligente a su alcance" />
+    <Breadcrumbs indexText="Portada" />
+
+    <!-- Links Internos -->
+
+    <SectionContent subTitle="la automatización inteligente a su alcance" Title="Celdas robóticas">
+		<Fragment slot="SectionHTML">
+			<p>Las células robóticas son sistemas automatizados que combinan robots, equipos periféricos y software de control para realizar una tarea específica. Son una solución de automatización ideal para empresas de todos los tamaños que buscan mejorar la eficiencia, productividad y calidad de sus operaciones.</p>
+            <p>
+                <ul>
+                    <li>Celdas de ensamblaje</li>
+                    <li>Celdas de paletizaje</li>
+                    <li>Celdas de pintura</li>
+                    <li>Celdas de soldadura</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/celdas-roboticas" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="la automatización a su medida" Title="Estaciones personalizadas" Reverse=true>
+		<Fragment slot="SectionHTML">
+			<p>Las estaciones personalizadas son soluciones de automatización que se adaptan a las necesidades específicas de cada empresa. Son una excelente opción para empresas que buscan una solución de automatización que se adapte a sus procesos y flujos de trabajo únicos.</p>
+            <p>
+                <ul>
+                    <li>Estaciones de torque</li>
+                    <li>Estaciones de ensamblaje</li>
+                    <li>Estaciones de ensamble</li>
+                    <li>Estaciones de trabajo</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/estaciones-personalizadas" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="La clave para una cadena de suministro eficiente" Title="Manejo de materiales">
+		<Fragment slot="SectionHTML">
+			<p>El manejo de materiales es el proceso de mover, almacenar y controlar materiales a lo largo de la cadena de suministro. Es una parte esencial de cualquier empresa, ya que afecta directamente la eficiencia, la productividad y la rentabilidad.</p>
+            <p>
+                <ul>
+                    <li>Conveyors</li>
+                    <li>Mesas giratorias</li>
+                    <li>Bowl feeders</li>
+                    <li>Pick and place</li>
+                    <li>Gantries</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/manejo-de-materiales" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="la precisión y la calidad a su alcance" Title="Maquinados" Reverse=true>
+		<Fragment slot="SectionHTML">
+			<p>Los maquinados son el proceso de dar forma a un material mediante la eliminación de material sobrante. Es una técnica esencial para la fabricación de una amplia gama de piezas, desde componentes industriales hasta productos de consumo.</p>
+            <p>
+                <ul>
+                    <li>Maquinados de precision</li>
+                    <li>Maquinados convencionales</li>
+                    <li>Dispositivos para producción</li>
+                    <li>Tratamientos térmicos</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/maquinados" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="la clave para la excelencia" Title="Control de calidad">
+		<Fragment slot="SectionHTML">
+			<p>El control de calidad es el proceso de garantizar que los productos y servicios cumplan con los requisitos establecidos. Es una parte esencial de cualquier empresa, ya que afecta directamente la satisfacción del cliente, la reputación de la marca y la rentabilidad.</p>
+            <p>
+                <ul>
+                    <li>Gauges</li>
+                    <li>Calibradores</li>
+                    <li>Dispositivos para chequeo y verificación</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/control-de-calidad" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="la clave para la transparencia" Title="Trazabilidad" Reverse=true>
+		<Fragment slot="SectionHTML">
+			<p>La trazabilidad es el proceso de rastrear el movimiento de productos y servicios a lo largo de la cadena de suministro. Es una parte esencial de cualquier empresa que desee garantizar la seguridad, la calidad y la sostenibilidad de sus productos y servicios.</p>
+            <p>
+                <ul>
+                    <li>Escáners</li>
+                    <li>Impresoras</li>
+                    <li>Micropercusoras</li>
+                    <li>Equipos de marcaje láser</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/trazabilidad" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="la clave para la seguridad y la calidad" Title="Sistemas de pruebas">
+		<Fragment slot="SectionHTML">
+			<p>Los sistemas de pruebas son una parte esencial de cualquier empresa que desee garantizar la seguridad y la calidad de sus productos y servicios. Estos sistemas se utilizan para evaluar el rendimiento, la funcionalidad y la conformidad de los productos y servicios con los requisitos establecidos.</p>
+            <p>
+                <ul>
+                    <li>Pruebas de fugas</li>
+                    <li>Prueba eléctrica</li>
+                    <li>Prueba HI-POT</li>
+                    <li>Sistema de visión</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/sistemas-de-prueba" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="la fuerza que impulsa la fabricación" Title="Prensas" Reverse=true>
+		<Fragment slot="SectionHTML">
+			<p>Las prensas son máquinas que utilizan una fuerza para deformar o cortar materiales. Son una herramienta esencial para la fabricación de una amplia gama de piezas y productos, desde componentes industriales hasta artículos de consumo.</p>
+            <p>
+                <ul>
+                    <li>Servoprensas</li>
+                    <li>Prensas Neumáticas</li>
+                    <li>Micropercusoras</li>
+                    <li>Prensas hidráulicas</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/prensas" />
+		</Fragment>
+	</SectionContent>
+
+    <SectionContent subTitle="el futuro de las operaciones" Title="Soluciones de ingeniería">
+		<Fragment slot="SectionHTML">
+			<p>Las soluciones de ingeniería son el uso de la ciencia, la tecnología y la ingeniería para resolver problemas y mejorar las operaciones. Son una parte esencial de cualquier empresa que desee mantenerse competitiva en el mercado actual.</p>
+            <p>
+                <ul>
+                    <li>Ingeniería de control y programación</li>
+                    <li>Ingeniería eléctrica</li>
+                    <li>Ingeniería mecánica</li>
+                    <li>Ingeniería inversa y Desarrollo de ingeniería</li>
+                </ul>
+            </p>
+
+            <CTAButton ctaText="Ver más información" ctaLink="/soluciones/soluciones-de-ingenieria" />
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

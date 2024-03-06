@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InnerHeroSection from "../../components/InnerHeroSection.astro";
+import SectionContent from "../../components/SectionContent.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import SectionIntro from "../../components/SectionIntro.astro";
+import DefinitionCards from "../../components/DefinitionCards.astro";
+import { Breadcrumbs } from "astro-breadcrumbs";
+import 'astro-breadcrumbs/breadcrumbs.scss';
+
+const _array = [
+    ['Pruebas de fuga', 'Las pruebas de fuga se utilizan para detectar fugas en componentes o sistemas.'], 
+    ['Prueba eléctrica', 'Las pruebas eléctricas se utilizan para verificar el funcionamiento de los componentes eléctricos.'], 
+    ['Prueba HI-POT', 'Las pruebas HI-POT se utilizan para verificar la resistencia de aislamiento de los componentes eléctricos.'], 
+    ['Sistemas de visión', 'Los sistemas de visión se utilizan para inspeccionar productos y procesos en busca de defectos.']
+];
+---
+<Layout title="ZION" desc="Description">
+	<InnerHeroSection subTitle="la clave para la seguridad y la calidad" Title="Sistemas de prueba" />
+    <Breadcrumbs indexText="Portada" />
+
+    <SectionIntro Title="ZION le ayuda a garantizar la calidad de sus productos y procesos a través de una amplia gama de sistemas de prueba">
+        <Fragment slot="IntroContent">
+            <p>Los sistemas de prueba son esenciales para garantizar la calidad de los productos y procesos. Permiten a las empresas identificar y corregir los defectos antes de que lleguen al cliente, lo que puede ayudar a reducir los costos, mejorar la seguridad y cumplir con las regulaciones.</p>
+            <p>ZION ofrece una amplia gama de sistemas de prueba para satisfacer sus necesidades específicas, incluyendo:</p>
+        </Fragment>
+    </SectionIntro>
+
+    <DefinitionCards defArray={_array} />
+
+    <SectionContent Title="Sistemas de prueba de ZION Automation">
+		<Fragment slot="SectionHTML">
+			<p>Los sistemas de prueba de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>
+                <ul>
+                    <li>Garantía de calidad: Los sistemas de prueba de ZION ayudan a garantizar que sus productos y procesos cumplan con los estándares de calidad establecidos.</li>
+                    <li>Reducción de los costos: Los sistemas de prueba de ZION pueden ayudar a reducir los costos al identificar y corregir los defectos antes de que lleguen al cliente.</li>
+                    <li>Mejora de la seguridad: Los sistemas de prueba de ZION pueden ayudar a mejorar la seguridad al garantizar que sus productos y procesos sean seguros de usar.</li>
+                    <li>Cumplimiento: Los sistemas de prueba de ZION pueden ayudarle a cumplir con las regulaciones gubernamentales al proporcionar pruebas de los productos y procesos que cumplen con los requisitos.</li>
+                </ul>
+            </p>
+            <p>Si está buscando un sistema de prueba que le ayude a garantizar la calidad, la eficiencia y el cumplimiento, ZION es la opción ideal para usted.</p>
+            <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo los sistemas de prueba de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
+		</Fragment>
+	</SectionContent>
+
+	<ContactSection />
+
+	<Footer />
+</Layout>

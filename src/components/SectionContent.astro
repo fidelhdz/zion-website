@@ -1,0 +1,24 @@
+---
+interface PROPS {
+    subTitle?: string;
+    Title: string;
+    Reverse?: boolean;
+}
+import SectionTitles from './sub_components/SectionTitles.astro';
+
+const { subTitle, Title, Reverse=false } = Astro.props;
+---
+<section class="zion-section">
+    <div class="row">
+        <div class:list={["col-12", "col-xl-6", "zion-image-block", { 'order-xl-last': Reverse }, { 'order-xl-first': !Reverse }]}>
+            <div class="zion-image-container"></div>
+        </div>
+        <div class:list={["col-12", "col-xl-6", { 'order-xl-first': Reverse }, { 'order-xl-last': !Reverse }]}>
+            <div class="content-section-text">
+                <SectionTitles subTitle={subTitle} Title={Title} />
+
+                <slot name="SectionHTML" />
+            </div>
+        </div>
+    </div>
+</section>

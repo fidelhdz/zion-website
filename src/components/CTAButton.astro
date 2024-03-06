@@ -1,0 +1,76 @@
+---
+interface PROPS {
+    ctaText: string;
+    ctaLink: string;
+}
+const { ctaText, ctaLink } = Astro.props;
+---
+
+<div class="cta-container">
+    <a href={ctaLink} class="cta-button">{ctaText}</a>
+</div>
+
+<style lang="scss">
+    .cta-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-top: 50px;
+
+        a.cta-button {
+            background-color: var(--zion-cc-red);
+            color: var(--zion-cc-white);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            padding: 8px 20px;
+            position: relative;
+            transition: all ease-in-out 0.3s;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 20px;
+                height: 34px;
+                top: 0;
+                left: -20px;
+                border-left: 10px solid transparent;
+                border-top: 17px solid transparent;
+                border-bottom: 17px solid var(--zion-cc-red);
+                border-right: 10px solid var(--zion-cc-red);
+                transition: all ease-in-out 0.3s;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 20px;
+                height: 34px;
+                top: 0;
+                right: -20px;
+                border-right: 10px solid transparent;
+                border-bottom: 17px solid transparent;
+                border-top: 17px solid var(--zion-cc-red);
+                border-left: 10px solid var(--zion-cc-red);
+                transition: all ease-in-out 0.3s;
+            }
+
+            &:hover {
+                background-color: var(--zion-cc-black);
+                
+                &::before {
+                    border-bottom-color: var(--zion-cc-black);
+                    border-right-color: var(--zion-cc-black);
+                }
+
+                &::after {
+                    border-top-color: var(--zion-cc-black);
+                    border-left-color: var(--zion-cc-black);
+                }
+            }
+        }
+    }
+</style>
