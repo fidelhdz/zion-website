@@ -2,7 +2,7 @@
 interface PROPS {
     linkColor?: string;
 }
-const {linkColor = '#FFFFFF'} = Astro.props;
+const {linkColor = '#FFFFFF'} = Astro.props as PROPS;
 ---
 <nav>
     <ul>

@@ -6,7 +6,7 @@ interface PROPS {
 }
 import SectionTitles from './sub_components/SectionTitles.astro';
 
-const { subTitle, Title, Reverse=false } = Astro.props;
+const { subTitle, Title, Reverse=false } = Astro.props as PROPS;
 ---
 <section class="zion-section">
     <div class="row">

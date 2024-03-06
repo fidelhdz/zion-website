@@ -2,7 +2,7 @@
 interface PROPS {
     Title: string;
 }
-const { Title } = Astro.props;
+const { Title } = Astro.props as PROPS;
 ---
 
 <section class="zion-section-intro">

@@ -4,13 +4,13 @@ interface PROPS {
 }
 import Card from "./sub_components/Card.astro";
 
-const {defArray} = Astro.props;
+const {defArray} = Astro.props as PROPS;
 ---
 
 <section class="zion-cards-definition">
     <div class="row cards-container">
         {
-            defArray.map( (val) => (
+            defArray.map( (val:string) => (
             <Card Title={ val[0] }>
                 <Fragment slot="ContentCard">
                     <p>{ val[1] }</p>

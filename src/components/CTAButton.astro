@@ -3,7 +3,7 @@ interface PROPS {
     ctaText: string;
     ctaLink: string;
 }
-const { ctaText, ctaLink } = Astro.props;
+const { ctaText, ctaLink } = Astro.props as PROPS;
 ---
 
 <div class="cta-container">
