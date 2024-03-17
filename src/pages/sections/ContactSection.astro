@@ -24,15 +24,178 @@ import CTAButton from "../../components/CTAButton.astro";
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perspiciatis, distinctio blanditiis ut exercitationem beatae error. At, eos fugit reiciendis, voluptates aliquam velit vero voluptas animi beatae assumenda consectetur tempora!
                 </p>
         
-                <CTAButton ctaText="Forma de contacto" ctaLink="#" />
+                <CTAButton ctaText="Forma de contacto" ctaLink="javascript:void(0);" idTag="launch-contact" />
             </div>
         </div>
     </div>
 </section>
 
+<div class="overlay">
+    <div class="contact-form">
+        <div class="close">&times;</div>
+        <div class="row">
+            <div class="col">
+                <h2>ZION Automation</h2>
+                <p>Gracias por interesarse en los servicios que <strong>ZION Automation</strong> tiene para usted. Por favor, complete la siguiente forma para poder darle un seguimiento puntual a su solicitud.</p>
+                <div class="form">
+                    <div class="row">
+                        <div class="col-12 col-xl-6">
+                            A
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            B
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <textarea name="" id=""></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Politicas de privacidad -->
+                    </div>
+                    <div class="row">
+                        <div class="col button-container">
+                            <button>Enviar Forma</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const launchContact:any = document.querySelector('#launch-contact');
+    const theOverlay:any = document.querySelector('.overlay');
+    const closeForm:any = document.querySelector('.close');
+
+    launchContact.addEventListener('click', () => {
+        theOverlay.style.display = 'block';
+
+        closeForm.addEventListener('click', () => {
+            theOverlay.style.display = 'none';
+        });
+    });
+</script>
+
 <style lang="scss">
     .contact-logo {
         width: 110px;
         margin-bottom: 40px;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        display: none;
+
+        .contact-form {
+            background-color: #b7b7b7;
+            max-width: 800px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 40px;
+
+            @media screen and (width <= 1200px) {
+                width: 96%;
+                padding: 20px;
+            }
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                font-size: 40px;
+                color: var(--zion-cc-gray);
+                cursor: pointer;
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    color: var(--zion-cc-red);
+                }
+            }
+
+            textarea, input {
+                background-color: var(--zion-cc-white);
+                width: 100%;
+                border: 1px solid var(--zion-cc-gray);
+            }
+
+            textarea {
+                height: 80px;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 20px;
+                margin-top: 50px;
+
+                button {
+                    background-color: var(--zion-cc-red);
+                    color: var(--zion-cc-white);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    padding: 8px 20px;
+                    position: relative;
+                    transition: all ease-in-out 0.3s;
+                    border: none;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        width: 20px;
+                        height: 34px;
+                        top: 0;
+                        left: -20px;
+                        border-left: 10px solid transparent;
+                        border-top: 17px solid transparent;
+                        border-bottom: 17px solid var(--zion-cc-red);
+                        border-right: 10px solid var(--zion-cc-red);
+                        transition: all ease-in-out 0.3s;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        width: 20px;
+                        height: 34px;
+                        top: 0;
+                        right: -20px;
+                        border-right: 10px solid transparent;
+                        border-bottom: 17px solid transparent;
+                        border-top: 17px solid var(--zion-cc-red);
+                        border-left: 10px solid var(--zion-cc-red);
+                        transition: all ease-in-out 0.3s;
+                    }
+
+                    &:hover {
+                        background-color: var(--zion-cc-black);
+                        
+                        &::before {
+                            border-bottom-color: var(--zion-cc-black);
+                            border-right-color: var(--zion-cc-black);
+                        }
+
+                        &::after {
+                            border-top-color: var(--zion-cc-black);
+                            border-left-color: var(--zion-cc-black);
+                        }
+                    }
+                }
+            }
+        }
     }
 </style>

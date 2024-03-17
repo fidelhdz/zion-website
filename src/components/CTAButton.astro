@@ -2,12 +2,19 @@
 interface PROPS {
     ctaText: string;
     ctaLink: string;
+    idTag?: string;
 }
-const { ctaText, ctaLink } = Astro.props as PROPS;
+const { ctaText, ctaLink, idTag } = Astro.props as PROPS;
 ---
 
 <div class="cta-container">
-    <a href={ctaLink} class="cta-button">{ctaText}</a>
+    {idTag
+    ?
+        <a href={ctaLink} class="cta-button" id={idTag}>{ctaText}</a>
+    :
+        <a href={ctaLink} class="cta-button">{ctaText}</a>
+    }
+    
 </div>
 
 <style lang="scss">

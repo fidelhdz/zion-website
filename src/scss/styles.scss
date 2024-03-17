@@ -127,7 +127,7 @@ section {
     &.ubicaciones-home {
         background-color: #010101;
         background-image: url('/assets/images/backgrounds/back-ubicaciones-resumen.jpg');
-        background-position: right top;
+        background-position: left top;
         background-size: cover;
         color: white;
         padding: 60px;
@@ -252,8 +252,10 @@ section {
                 
                 .img-solution {
                     border: 1px solid var(--zion-cc-red);
+                    display: block;
+                    overflow: hidden;
                     img {
-                        max-width: 100%;
+                        width: 100%;
                     }
                 }
             }
