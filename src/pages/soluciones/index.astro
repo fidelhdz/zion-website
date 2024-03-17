@@ -2,21 +2,34 @@
 import Layout from "../../layouts/Layout.astro";
 import InnerHeroSection from "../../components/InnerHeroSection.astro";
 import SectionContent from "../../components/SectionContent.astro";
-import Footer from "../../components/Footer.astro";
-import ContactSection from "../../components/ContactSection.astro";
+import Footer from "../sections/Footer.astro";
+import ContactSection from "../sections/ContactSection.astro";
 import CTAButton from "../../components/CTAButton.astro";
 import { Breadcrumbs } from "astro-breadcrumbs";
 import 'astro-breadcrumbs/breadcrumbs.scss';
 ---
 <Layout title="ZION" desc="Description">
-	<InnerHeroSection subTitle="Mejore su eficiencia, productividad y calidad con la ayuda de ZION" Title="La automatización inteligente a su alcance" />
+	<InnerHeroSection subTitle="Mejore su eficiencia, productividad y calidad con la ayuda de ZION" Title="La automatización inteligente a su alcance" backImg="/assets/images/backgrounds/back-soluciones.jpg" />
     <Breadcrumbs indexText="Portada" />
 
-    <!-- Links Internos -->
+    <section class="internal-links">
+        <div class="blur-ball"></div>
+        <ul>
+            <li><a href="#celdas-roboticas">Celdas robóticas</a></li>
+            <li><a href="#estaciones-personalizadas">Estaciones personalizadas</a></li>
+            <li><a href="#manejo-de-materiales">Manejo de materiales</a></li>
+            <li><a href="#maquinados">Maquinados</a></li>
+            <li><a href="#control-de-calidad">Control de calidad</a></li>
+            <li><a href="#trazabilidad">Trazabilidad</a></li>
+            <li><a href="#sistema-de-pruebas">Sistema de pruebas</a></li>
+            <li><a href="#prensas">Prensas</a></li>
+            <li><a href="#soluciones-de-ingenieria">Soluciones de ingeniería</a></li>
+        </ul>
+    </section>
 
-    <SectionContent subTitle="la automatización inteligente a su alcance" Title="Celdas robóticas">
+    <SectionContent subTitle="la automatización inteligente a su alcance" Title="Celdas robóticas" idBlock="celdas-roboticas">
 		<Fragment slot="SectionHTML">
-			<p>Las células robóticas son sistemas automatizados que combinan robots, equipos periféricos y software de control para realizar una tarea específica. Son una solución de automatización ideal para empresas de todos los tamaños que buscan mejorar la eficiencia, productividad y calidad de sus operaciones.</p>
+            <p>Las células robóticas son sistemas automatizados que combinan robots, equipos periféricos y software de control para realizar una tarea específica. Son una solución de automatización ideal para empresas de todos los tamaños que buscan mejorar la eficiencia, productividad y calidad de sus operaciones.</p>
             <p>
                 <ul>
                     <li>Celdas de ensamblaje</li>
@@ -30,7 +43,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="la automatización a su medida" Title="Estaciones personalizadas" Reverse=true>
+    <SectionContent subTitle="la automatización a su medida" Title="Estaciones personalizadas" idBlock="estaciones-personalizadas" Reverse=true>
 		<Fragment slot="SectionHTML">
 			<p>Las estaciones personalizadas son soluciones de automatización que se adaptan a las necesidades específicas de cada empresa. Son una excelente opción para empresas que buscan una solución de automatización que se adapte a sus procesos y flujos de trabajo únicos.</p>
             <p>
@@ -46,7 +59,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="La clave para una cadena de suministro eficiente" Title="Manejo de materiales">
+    <SectionContent subTitle="La clave para una cadena de suministro eficiente" Title="Manejo de materiales" idBlock="manejo-de-materiales">
 		<Fragment slot="SectionHTML">
 			<p>El manejo de materiales es el proceso de mover, almacenar y controlar materiales a lo largo de la cadena de suministro. Es una parte esencial de cualquier empresa, ya que afecta directamente la eficiencia, la productividad y la rentabilidad.</p>
             <p>
@@ -63,7 +76,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="la precisión y la calidad a su alcance" Title="Maquinados" Reverse=true>
+    <SectionContent subTitle="la precisión y la calidad a su alcance" Title="Maquinados" idBlock="maquinados" Reverse=true>
 		<Fragment slot="SectionHTML">
 			<p>Los maquinados son el proceso de dar forma a un material mediante la eliminación de material sobrante. Es una técnica esencial para la fabricación de una amplia gama de piezas, desde componentes industriales hasta productos de consumo.</p>
             <p>
@@ -79,7 +92,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="la clave para la excelencia" Title="Control de calidad">
+    <SectionContent subTitle="la clave para la excelencia" Title="Control de calidad" idBlock="control-de-calidad">
 		<Fragment slot="SectionHTML">
 			<p>El control de calidad es el proceso de garantizar que los productos y servicios cumplan con los requisitos establecidos. Es una parte esencial de cualquier empresa, ya que afecta directamente la satisfacción del cliente, la reputación de la marca y la rentabilidad.</p>
             <p>
@@ -94,7 +107,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="la clave para la transparencia" Title="Trazabilidad" Reverse=true>
+    <SectionContent subTitle="la clave para la transparencia" Title="Trazabilidad" idBlock="trazabilidad" Reverse=true>
 		<Fragment slot="SectionHTML">
 			<p>La trazabilidad es el proceso de rastrear el movimiento de productos y servicios a lo largo de la cadena de suministro. Es una parte esencial de cualquier empresa que desee garantizar la seguridad, la calidad y la sostenibilidad de sus productos y servicios.</p>
             <p>
@@ -110,7 +123,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="la clave para la seguridad y la calidad" Title="Sistemas de pruebas">
+    <SectionContent subTitle="la clave para la seguridad y la calidad" Title="Sistemas de pruebas" idBlock="sistema-de-pruebas">
 		<Fragment slot="SectionHTML">
 			<p>Los sistemas de pruebas son una parte esencial de cualquier empresa que desee garantizar la seguridad y la calidad de sus productos y servicios. Estos sistemas se utilizan para evaluar el rendimiento, la funcionalidad y la conformidad de los productos y servicios con los requisitos establecidos.</p>
             <p>
@@ -126,7 +139,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="la fuerza que impulsa la fabricación" Title="Prensas" Reverse=true>
+    <SectionContent subTitle="la fuerza que impulsa la fabricación" Title="Prensas" idBlock="prensas" Reverse=true>
 		<Fragment slot="SectionHTML">
 			<p>Las prensas son máquinas que utilizan una fuerza para deformar o cortar materiales. Son una herramienta esencial para la fabricación de una amplia gama de piezas y productos, desde componentes industriales hasta artículos de consumo.</p>
             <p>
@@ -142,7 +155,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="el futuro de las operaciones" Title="Soluciones de ingeniería">
+    <SectionContent subTitle="el futuro de las operaciones" Title="Soluciones de ingeniería" idBlock="soluciones-de-ingenieria">
 		<Fragment slot="SectionHTML">
 			<p>Las soluciones de ingeniería son el uso de la ciencia, la tecnología y la ingeniería para resolver problemas y mejorar las operaciones. Son una parte esencial de cualquier empresa que desee mantenerse competitiva en el mercado actual.</p>
             <p>

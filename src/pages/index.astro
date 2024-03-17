@@ -5,9 +5,12 @@ import Addresses from "../components/addresses.astro";
 import ContactItems from "../components/ContactItems.astro";
 import TextOnHeader from "../components/TextOnHeader.astro";
 import SectionContent from "../components/SectionContent.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "./sections/Footer.astro";
 import SectionWideContent from "../components/SectionWideContent.astro";
-import ContactSection from "../components/ContactSection.astro";
+import ContactSection from "./sections/ContactSection.astro";
+import PositiveLogo from "../components/logos/PositiveLogo.astro";
+import SectionTitles from "../components/sub_components/SectionTitles.astro";
+import CTAButton from "../components/CTAButton.astro";
 ---
 <Layout title="ZION Automation: Soluciones de automatización industrial" desc="Somos la empresa líder en soluciones de automatización industrial en el norte de México y el sur de Estados Unidos. Ofrecemos una amplia gama de soluciones, desde celdas robóticas hasta sistemas de pruebas, que pueden ayudar a las empresas a mejorar su eficiencia, productividad y calidad.">
 	<header>
@@ -32,10 +35,57 @@ import ContactSection from "../components/ContactSection.astro";
 			<p>
 				<a href="#">Contáctenos</a> hoy mismo para obtener más información sobre cómo podemos ayudarle a alcanzar sus objetivos de automatización.
 			</p>
+			<div class="positive-logo text-center"><PositiveLogo /></div>
 		</Fragment>
 	</SectionContent>
 
-
+	<section class="soluciones-home">
+		<div class="row">
+			<div class="col-12 col-xl-6 offset-xl-3 text-center">
+				<h2>Soluciones de automatización industrial para mejorar la eficiencia, productividad y calidad</h2>
+				<p><small>Zion Automation se compromete a ofrecer a sus clientes soluciones de automatización innovadoras y de alta calidad. Trabajamos con nuestros clientes para comprender sus necesidades específicas y desarrollar soluciones que les ayuden a alcanzar sus objetivos de negocio.</small></p>
+			</div>
+			
+			<div class="soluciones-contanier">
+				<div class="solucion">
+					<div class="img-solution">
+						<img src="/assets/images/home-celdas-roboticas.jpg" alt="" />
+					</div>
+					<div class="title">Celdas Robóticas</div>
+					<p>
+						Las celdas robóticas son una solución de automatización versátil que se puede utilizar para una amplia gama de aplicaciones. Son una opción ideal para usted que busca mejorar su eficiencia, productividad y calidad.
+					</p>
+				</div>
+				<div class="solucion">
+					<div class="img-solution">
+						<img src="/assets/images/home-manejo-de-materiales.jpg" alt="" />
+					</div>
+					<div class="title">Manejo de materiales</div>
+					<p>
+						El manejo de materiales es un aspecto esencial de cualquier proceso de producción. Las soluciones de manejo de materiales de Zion Automation pueden ayudarle a mejorar la eficiencia y la productividad de sus operaciones de producción.
+					</p>
+				</div>
+				<div class="solucion">
+					<div class="img-solution">
+						<img src="/assets/images/home-control-de-calidad.jpg" alt="" />
+					</div>
+					<div class="title">Control de calidad</div>
+					<p>
+						El control de calidad es fundamental para garantizar la calidad de los productos. Las soluciones de control de calidad de Zion Automation pueden ayudarlo a detectar defectos y mejorar la calidad de sus productos.
+					</p>
+				</div>
+				<div class="solucion">
+					<div class="img-solution">
+						<img src="/assets/images/home-soluciones-de-ingenieria.jpg" alt="" />
+					</div>
+					<div class="title">Soluciones de ingeniería</div>
+					<p>
+						Zion Automation ofrece una amplia gama de servicios de ingeniería de automatización. Estas soluciones pueden ayudarlo a diseñar y construir soluciones de automatización personalizadas que satisfagan sus necesidades específicas.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<SectionWideContent subTitle="Nuestro trabajo habla por si solo" Title="Nuestros Clientes">
 		<Fragment slot="SectionHTML">
@@ -55,6 +105,34 @@ import ContactSection from "../components/ContactSection.astro";
 			</div>
 		</Fragment>
 	</SectionWideContent>
+
+	<section class="ubicaciones-home">
+		<div class="row">
+			<div class="col-12 col-xl-6 offset-xl-6">
+				<div class="ubicaciones-container">
+					<SectionTitles subTitle="Estamos en México y Estados Unidos" Title="Ubicaciones" />
+					<p>Zion Automation cuenta con oficinas y centros de producción en México y Estados Unidos. Esta ubicación estratégica nos permite brindar a usted un servicio de alta calidad y una respuesta rápida a sus necesidades.</p>
+					<div class="row mt-5">
+						<div class="col-6">
+							<h3>México</h3>
+							<ul>
+								<li>Saltillo, Coahuila</li>
+								<li>Monterrey, Nuevo León</li>
+								<li>Cd. Juárez, Chihuahua</li>
+							</ul>
+						</div>
+						<div class="col-6">
+							<h3>Estados Unidos</h3>
+							<ul>
+								<li>El Paso, Texas</li>
+							</ul>
+						</div>
+					</div>
+					<CTAButton ctaText="ver más información" ctaLink="/ubicaciones" />
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<SectionWideContent subTitle="La Unión hace la fuerza" Title="Socios Comerciales">
 		<Fragment slot="SectionHTML">

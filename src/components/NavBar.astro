@@ -1,4 +1,5 @@
 ---
+import TopLogo from './logos/TopLogo.astro';
 interface PROPS {
     linkColor?: string;
 }
@@ -11,7 +12,7 @@ const {linkColor = '#FFFFFF'} = Astro.props as PROPS;
         <li>
             <a href="/">
                 <div class="logo-top">
-                    <img src="/assets/images/top_logo.svg" width="82" alt="ZION Corp Logo">
+                    <TopLogo />
                 </div>
             </a>
         </li>
@@ -51,8 +52,8 @@ const {linkColor = '#FFFFFF'} = Astro.props as PROPS;
 
                     .logo-top {
                         display: block;
-                        width: 100px;
-                        height: 100px;
+                        width: 80px;
+                        height: 90px;
                         text-align: center;
                     }
 

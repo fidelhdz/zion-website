@@ -1,15 +1,23 @@
+---
+import FooterLogo from '../../components/logos/FooterLogo.astro';
+import FBIcon from '../../components/icons/fbIcon.astro';
+import YTIcon from '../../components/icons/ytIcon.astro';
+import XIcon from '../../components/icons/xIcon.astro';
+import INIcon from '../../components/icons/inIcon.astro';
+---
 <footer>
     <!-- <div class="container"> -->
         <div class="row">
-            <div class="col-12 col-xl-3">
+            <div class="col-12 col-xl-2">
                 <div class="zion-footer-logo">
-                    <img src="/assets/images/footer_logo.svg" width="199" alt="ZION Corp Logo">
+                    <FooterLogo />
                 </div>
                 <p>
                     &copy;{ new Date().getFullYear()  } Todos los derechos reservados,
                     Zion Automation Factory
                 </p>
             </div>
+            <div class="col-xl-1 d-none d-xl-block">&nbsp;</div>
             <div class="col-12 col-xl-2">
                 <a href="/soluciones/celdas-roboticas">Celdas Robóticas</a>
                 <ul>
@@ -88,14 +96,19 @@
                 <ul class="links-list">
                     <li><a href="/conocenos">Conócenos</a></li>
                     <li><a href="/ubicaciones">Ubicaciones</a></li>
-                    <li><a href="#">Carrera en Zion</a></li>
+                    <!-- <li><a href="#">Carrera en Zion</a></li>
                     <li><a href="#">Recursos</a></li>
                     <li><a href="#">Adquisiciones Recientes</a></li>
-                    <li><a href="#">Atención a Clientes</a></li>
+                    <li><a href="#">Atención a Clientes</a></li> -->
                 </ul>
             </div>
             <div class="col-12 col-xl-1">
-                Social
+                <ul class="social-links">
+                    <li><a href="#"><INIcon /></a></li>
+                    <li><a href="#"><FBIcon /></a></li>
+                    <li><a href="#"><XIcon /></a></li>
+                    <li><a href="#"><YTIcon /></a></li>
+                </ul>
             </div>
         </div>
     <!-- </div> -->
@@ -104,15 +117,26 @@
 <style lang="scss">
     .zion-footer-logo {
         margin-bottom: 30px;
+        width: 200px;
     }
 
-    ul.links-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    ul {
+        &.links-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
-        li {
-            margin-bottom: 10px;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        &.social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
         }
     }
 

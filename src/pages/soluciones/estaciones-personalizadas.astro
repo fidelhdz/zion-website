@@ -2,8 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import InnerHeroSection from "../../components/InnerHeroSection.astro";
 import SectionContent from "../../components/SectionContent.astro";
-import Footer from "../../components/Footer.astro";
-import ContactSection from "../../components/ContactSection.astro";
+import Footer from "../sections/Footer.astro";
+import ContactSection from "../sections/ContactSection.astro";
 import SectionIntro from "../../components/SectionIntro.astro";
 import DefinitionCards from "../../components/DefinitionCards.astro";
 import { Breadcrumbs } from "astro-breadcrumbs";
@@ -17,7 +17,7 @@ const _array = [
 ];
 ---
 <Layout title="ZION" desc="Description">
-	<InnerHeroSection subTitle="la automatización a su medida" Title="Estaciones personalizadas" />
+	<InnerHeroSection subTitle="la automatización a su medida" Title="Estaciones personalizadas" backImg="/assets/images/backgrounds/back-estaciones-personalizadas.jpg" />
     <Breadcrumbs indexText="Portada" />
 
     <SectionIntro Title="ZION le ayuda a diseñar y fabricar estaciones personalizadas que se adapten a sus necesidades específicas">

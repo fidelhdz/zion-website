@@ -2,15 +2,38 @@
 import Layout from "../layouts/Layout.astro";
 import InnerHeroSection from "../components/InnerHeroSection.astro";
 // import SectionContent from "../components/SectionContent.astro";
-import Footer from "../components/Footer.astro";
-import ContactSection from "../components/ContactSection.astro";
+import Footer from "./sections/Footer.astro";
+import ContactSection from "./sections/ContactSection.astro";
 import { Breadcrumbs } from "astro-breadcrumbs";
 import 'astro-breadcrumbs/breadcrumbs.scss';
 ---
 <Layout title="ZION" desc="Description">
-	<InnerHeroSection subTitle="Conozca nuestra historia, nuestros valores y nuestro compromiso" Title="Siempre cerca de la industria" />
+	<InnerHeroSection subTitle="Conozca nuestra historia, nuestros valores y nuestro compromiso" Title="Siempre cerca de la industria" backImg="/assets/images/backgrounds/back-conocenos.jpg" />
 	<Breadcrumbs indexText="Portada" />
-    <!-- Contenido -->
+    
+	<section class="valores-section">
+		<div class="blur-ball"></div>
+		<div class="row">
+			<div class="col-12 col-xl-4">
+				<h3>Misión</h3>
+				<p>
+					ZION Automation se basa en los valores de la excelencia, la innovación y el servicio al cliente. La excelencia es nuestro compromiso de brindar a sus clientes soluciones de automatización de la más alta calidad. La innovación es el de desarrollar nuevas soluciones de automatización que ayuden a las empresas a mejorar sus operaciones. El servicio al cliente es el de brindar a sus clientes un servicio excepcional.
+				</p>
+			</div>
+			<div class="col-12 col-xl-4">
+				<h3>Visión</h3>
+				<p>
+					ZION Automation se basa en los valores de la excelencia, la innovación y el servicio al cliente. La excelencia es nuestro compromiso de brindar a sus clientes soluciones de automatización de la más alta calidad. La innovación es el de desarrollar nuevas soluciones de automatización que ayuden a las empresas a mejorar sus operaciones. El servicio al cliente es el de brindar a sus clientes un servicio excepcional.
+				</p>
+			</div>
+			<div class="col-12 col-xl-4">
+				<h3>Valores</h3>
+				<p>
+					ZION Automation se basa en los valores de la excelencia, la innovación y el servicio al cliente. La excelencia es nuestro compromiso de brindar a sus clientes soluciones de automatización de la más alta calidad. La innovación es el de desarrollar nuevas soluciones de automatización que ayuden a las empresas a mejorar sus operaciones. El servicio al cliente es el de brindar a sus clientes un servicio excepcional.
+				</p>
+			</div>
+		</div>
+	</section>
 
 	<ContactSection />
 

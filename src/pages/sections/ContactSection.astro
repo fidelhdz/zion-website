@@ -1,0 +1,38 @@
+---
+import SectionTitles from '../../components/sub_components/SectionTitles.astro';
+import ContactLogo from "../../components/logos/ContactLogo.astro";
+import CTAButton from "../../components/CTAButton.astro";
+---
+
+<section class="zion-section">
+    <div class="row">
+        <div class="col-12 col-xl-6 zion-image-block order-xl-last">
+            <div class="zion-image-container"></div>
+        </div>
+        <div class="col-12 col-xl-6 order-xl-first">
+            <div class="content-section-text">
+                <div class="contact-logo">
+                    <ContactLogo />
+                </div>
+
+                <SectionTitles subTitle="Claro que podemos ayudarte" Title="Contáctenos" />
+
+                <p id="contacto">
+                    ¿Está interesado en aprender más sobre las soluciones de automatización de Zion Automation? Contáctenos hoy mismo para obtener más información
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perspiciatis, distinctio blanditiis ut exercitationem beatae error. At, eos fugit reiciendis, voluptates aliquam velit vero voluptas animi beatae assumenda consectetur tempora!
+                </p>
+        
+                <CTAButton ctaText="Forma de contacto" ctaLink="#" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .contact-logo {
+        width: 110px;
+        margin-bottom: 40px;
+    }
+</style>

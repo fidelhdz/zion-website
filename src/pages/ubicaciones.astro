@@ -2,16 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import InnerHeroSection from "../components/InnerHeroSection.astro";
 import SectionContent from "../components/SectionContent.astro";
-import Footer from "../components/Footer.astro";
-import ContactSection from "../components/ContactSection.astro";
+import Footer from "./sections/Footer.astro";
+import ContactSection from "./sections/ContactSection.astro";
 import { Breadcrumbs } from "astro-breadcrumbs";
 import 'astro-breadcrumbs/breadcrumbs.scss';
 ---
 <Layout title="ZION" desc="Description">
-	<InnerHeroSection subTitle="Ubicaciones" Title="Siempre cerca de la industria" />
+	<InnerHeroSection subTitle="Ubicaciones" Title="Siempre cerca de la industria" backImg="/assets/images/backgrounds/back-ubicacion.jpg" />
     <Breadcrumbs indexText="Portada" />
 
-	<SectionContent subTitle="Zion Automation El Paso, Texas" Title="Soluciones para empresas de la región">
+	<SectionContent subTitle="Zion Automation El Paso, Texas" Title="Soluciones para empresas de la región" sideImg="/assets/images/maps/usa.png">
 		<Fragment slot="SectionHTML">
 			<p>El Paso, Texas es un importante centro industrial y comercial en el suroeste de los Estados Unidos. Es el hogar de una amplia gama de empresas, desde fabricantes de automóviles hasta empresas de tecnología.</p>
 			<p>Zion Automation está comprometida a brindar a las empresas de El Paso y la región las soluciones de automatización de vanguardia que necesitan para prosperar. Nuestra oficina y centro de producción en El Paso ofrece una amplia gama de servicios, incluyendo:</p>
@@ -28,7 +28,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 		</Fragment>
 	</SectionContent>
 
-    <SectionContent subTitle="Zion Automation México" Title="Soluciones de automatización para el norte de México" Reverse=true>
+    <SectionContent subTitle="Zion Automation México" Title="Soluciones de automatización para el norte de México" Reverse=true  sideImg="/assets/images/maps/mex.png">
 		<Fragment slot="SectionHTML">
 			<p>Somos una empresa líder en soluciones de automatización para empresas de México. Con oficinas y centros de producción en Monterrey, Saltillo y Ciudad Juárez, Zion Automation está comprometida a brindar a sus clientes las soluciones que necesitan para mejorar su eficiencia, productividad y calidad. Le ofrecemos las siguientes soluciones:</p>
             <p>

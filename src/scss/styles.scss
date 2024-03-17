@@ -55,7 +55,11 @@ header {
     position: relative;
     height: 100svh;
     width: 100%;
+    max-height: 1080px;
     background-color: gray;
+    background-image: url('/assets/images/backgrounds/back-home.jpg');
+    background-size: cover;
+    background-position: top center;
 
     &.inner-hero {
         max-height: 650px;
@@ -113,6 +117,196 @@ section {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+
+            &.simple-back {
+                background-size: contain;
+            }
+        }
+    }
+
+    &.ubicaciones-home {
+        background-color: #010101;
+        background-image: url('/assets/images/backgrounds/back-ubicaciones-resumen.jpg');
+        background-position: right top;
+        background-size: cover;
+        color: white;
+        padding: 60px;
+        overflow: hidden;
+
+        @media screen and (width <= 1200px) {
+            padding: 60px 30px;
+        }
+
+        .ubicaciones-container {
+            padding: 40px;
+            
+            @media screen and (width <= 1200px) {
+                padding: 30px 20px;
+            }
+
+            h6 {
+                color: var(--zion-cc-gray);
+            }
+
+            h3 {
+                font-family: var(--zion-ff-alumni);
+                color: var(--zion-cc-gray);
+            }
+    
+            p {
+                
+            }
+        }
+    }
+
+    &.valores-section {
+        background-color: var(--zion-cc-black);
+        padding: 90px;
+        color: var(--zion-cc-white);
+        overflow: hidden;
+
+        h3 {
+            position: relative;
+            z-index: 2;
+            font-family: var(--zion-ff-alumni);
+            color: var(--zion-cc-red);
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            position: relative;
+            z-index: 2;
+            color: var(--zion-cc-white);
+        }
+
+        .blur-ball {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            display: block;
+            top: -60px;
+            left: -70px;
+            background: var(--zion-cc-white);
+            filter: blur(100px);
+            opacity: 0.2;
+        }
+    }
+
+    &.soluciones-home {
+        background-color: #010101;
+        background-image: url('/assets/images/backgrounds/back-soluciones-resumen.jpg');
+        background-position: right top;
+        background-size: cover;
+        color: white;
+        padding: 60px;
+        overflow: hidden;
+
+        @media screen and (width <= 1200px) {
+            padding: 60px 30px;
+        }
+
+        h2 {
+            color: var(--zion-cc-red);
+            font-size: 40px;
+        }
+
+        p {
+            & > small {
+                font-size: 14px;
+                line-height: 18px;
+                color: var(--zion-cc-gray);
+            }
+        }
+
+        .soluciones-contanier {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: nowrap;
+
+            @media screen and (width <= 1200px) {
+                flex-wrap: wrap;
+            }
+
+            .solucion {
+                width: 25%;
+                
+                @media screen and (width <= 1200px) {
+                    width: 100%;
+                }
+
+                .title {
+                    font-family: var(--zion-ff-alumni);
+                    font-size: 26px;
+                    color: var(--zion-cc-gray);
+                    margin: 10px 0;
+                }
+
+                p {
+                    font-size: clamp(12px, 14px, 16px);
+                    line-height: 18px;
+                }
+                
+                .img-solution {
+                    border: 1px solid var(--zion-cc-red);
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.internal-links {
+        padding: 60px;
+        position: relative;
+        overflow: hidden;
+        background-color: #010101;
+
+        @media screen and (width <= 1200px) {
+            padding: 60px 30px;
+        }
+
+        ul {
+            list-style: none;
+            columns: 3;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+
+            @media screen and (width <= 1200px) {
+                columns: 2;
+            }
+
+            li {
+                margin-bottom: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: var(--zion-cc-white);
+                    font-family: var(--zion-ff-avenir);
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .blur-ball {
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            display: block;
+            top: -100px;
+            left: -140px;
+            background: #ffffff;
+            filter: blur(90px);
+            opacity: 0.3;
         }
     }
 
@@ -177,6 +371,12 @@ section {
         }
     }
 
+    .positive-logo {
+        margin: 40px auto 0;
+        width: 250px;
+        display: block;
+    }
+
     .dark-section {
         position: relative;
         overflow: hidden;
@@ -184,13 +384,14 @@ section {
 
         .blur-ball {
             position: absolute;
-            width: 1000px;
-            height: 1000px;
+            width: 400px;
+            height: 200px;
             display: block;
-            top: -400px;
-            left: -400px;
-            background: #3c3c3c;
-            background: radial-gradient(circle, #3c3c3c 0%, #010101 60%); 
+            top: -100px;
+            left: -140px;
+            background: #ffffff;
+            filter: blur(90px);
+            opacity: 0.3;
         }
     }
 }
