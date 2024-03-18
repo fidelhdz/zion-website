@@ -1,11 +1,13 @@
 ---
+import FooterLogo from './logos/FooterLogo.astro';
+import PositiveLogo from './logos/PositiveLogo.astro';
 import TopLogo from './logos/TopLogo.astro';
 interface PROPS {
     linkColor?: string;
 }
 const {linkColor = '#FFFFFF'} = Astro.props as PROPS;
 ---
-<nav>
+<nav id="desktop-nav">
     <ul>
         <li><a href="/conocenos">Conócenos</a></li>
         <li><a href="/soluciones">Soluciones</a></li>
@@ -21,14 +23,113 @@ const {linkColor = '#FFFFFF'} = Astro.props as PROPS;
     </ul>
 </nav>
 
+<nav id="mobile-nav">
+    <ul>
+        <li>
+            <a href="/">
+                <div class="logo-top">
+                    <PositiveLogo />
+                </div>
+            </a>
+        </li>
+        <li>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="side-menu">
+    <a href="javascript: void(0);" class="close-menu">&times;</a>
+    <div class="logo-top">
+        <FooterLogo />
+    </div>
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/conocenos">Conócenos</a></li>
+        <li><a href="/soluciones">Soluciones</a></li>
+        <li><a href="/ubicaciones">Ubicaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</div>
+
+<script>
+    const burgerMenu:any = document.querySelector('.burger');
+    const closeMenu:any = document.querySelector('.close-menu');
+    const sideMenu:any = document.querySelector('.side-menu');
+
+    burgerMenu.addEventListener('click', () => {
+        sideMenu.classList.add('open');
+        sideMenu.classList.remove('close');
+    });
+    closeMenu.addEventListener('click', () => {
+        sideMenu.classList.add('close');
+        sideMenu.classList.remove('open');
+    });
+</script>
+
 <style lang="scss" define:vars={{ linkColor }}>
     nav {
         display: block;
         text-align: center;
         padding: 30px 0;
-        position: sticky;
+        position: absolute;
+        width: 100%;
         top: 0;
         left: 0;
+
+        &#desktop-nav {
+            display: block;
+
+            @media screen and (width < 800px){
+                display: none;
+            }
+        }
+
+        &#mobile-nav {
+            display: none;
+            padding: 10px 20px;
+            
+            @media screen and (width < 800px){
+                display: block;
+            }
+
+            .burger {
+                display: flex;
+                width: 50px;
+                height: 35px;
+                border: 1px solid var(--zion-cc-gray);
+                flex-direction: column;
+                padding: 5px 0;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 4px;
+                cursor: pointer;
+
+                .line {
+                    display: block;
+                    width: 30px;
+                    height: 1px;
+                    background-color: var(--zion-cc-gray);
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 60px;
+            }
+
+            .logo-top {
+                width: 150px;
+            }
+        }
 
         ul {
             display: flex;
@@ -62,6 +163,95 @@ const {linkColor = '#FFFFFF'} = Astro.props as PROPS;
                     }
                 }
             }
+        }
+    }
+
+    .side-menu {
+        position: fixed;
+        width: 320px;
+        height: 100%;
+        display: block;
+        background-color: var(--zion-cc-black);
+        top: 0;
+        right: -360px;
+        z-index: 100;
+        box-shadow: -5px 0 30px 6px rgba(0,0,0,0.5);
+        padding: 30px 0;
+
+        @media screen and (width > 800px){
+            display: none;
+        }
+
+        &.open {
+            animation: slideShowMenu 500ms forwards;
+        }
+
+        &.close {
+            animation: slideHideMenu 500ms forwards;
+        }
+
+        .close-menu {
+            text-decoration: none;
+            font-size: 40px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--zion-cc-gray);
+        }
+
+        .logo-top {
+            width: 200px;
+            margin: 40px auto 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+
+            li {
+                width: 100%;
+
+                .logo-top {
+                    margin: 0 auto 20px;
+                    width: 60%;
+                }
+
+                a {
+                    color: red;
+                    font-family: var(--zion-ff-avenir);
+                    font-size: 14px;
+                    display: block;
+                    width: 100%;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                    &:first-child {
+                        border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes slideShowMenu {
+        0% {
+            right: -360px;
+        }
+        100% {
+            right: 0;
+        }
+    }
+
+    @keyframes slideHideMenu {
+        0% {
+            right: 0;
+        }
+        100% {
+            right: -360px;
         }
     }
 </style>
