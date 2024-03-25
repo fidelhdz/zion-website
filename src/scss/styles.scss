@@ -118,8 +118,12 @@ section {
             background-repeat: no-repeat;
             background-position: center;
 
+            &.contacto-back {
+                background-image: url('/assets/images/contacto.jpg');
+            }
+
             &.simple-back {
-                background-size: contain;
+                background-size: cover;
             }
         }
     }
@@ -145,16 +149,42 @@ section {
             }
 
             h6 {
-                color: var(--zion-cc-gray);
+                color: var(--zion-cc-white);
             }
 
             h3 {
                 font-family: var(--zion-ff-alumni);
-                color: var(--zion-cc-gray);
+                color: var(--zion-cc-white);
             }
     
-            p {
-                
+            a.cta-button {
+                background-color: var(--zion-cc-white) !important;
+                color: var(--zion-cc-black) !important;
+
+                &::before {
+                    border-bottom: 17px solid var(--zion-cc-white) !important;
+                    border-right: 10px solid var(--zion-cc-white) !important;
+                }
+
+                &::after {
+                    border-top: 17px solid var(--zion-cc-white) !important;
+                border-left: 10px solid var(--zion-cc-white) !important;
+                }
+
+                &:hover {
+                    background-color: var(--zion-cc-red) !important;
+                    color: var(--zion-cc-white) !important;
+                    
+                    &::before {
+                        border-bottom-color: var(--zion-cc-red) !important;
+                        border-right-color: var(--zion-cc-red) !important;
+                    }
+    
+                    &::after {
+                        border-top-color: var(--zion-cc-red) !important;
+                        border-left-color: var(--zion-cc-red) !important;
+                    }
+                }
             }
         }
     }
@@ -241,7 +271,7 @@ section {
                 .title {
                     font-family: var(--zion-ff-alumni);
                     font-size: 26px;
-                    color: var(--zion-cc-gray);
+                    color: var(--zion-cc-white);
                     margin: 10px 0;
                 }
 
@@ -251,7 +281,7 @@ section {
                 }
                 
                 .img-solution {
-                    border: 1px solid var(--zion-cc-red);
+                    border: none;
                     display: block;
                     overflow: hidden;
                     img {

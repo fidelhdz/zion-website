@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 236 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-1310,-2.86885)">
-        <g id="Artboard4" transform="matrix(1.10779,0,0,0.927204,-141.46,2.86885)">
+    <g id="Artboard4" transform="matrix(1.10779,0,0,0.927204,-1451.46,0)">
+        <g>
             <rect x="1310.24" y="0" width="213.037" height="118.636" style="fill:none;"/>
             <g id="Layer_1_1_" transform="matrix(0.0394416,0,0,0.0471232,1379.19,21.7651)">
                 <g id="Nissan_Badge_1_">
@@ -16,8 +16,6 @@
                     <path d="M1633.14,1031.43L1632.38,1033.7C1533.36,1322.83 1260.48,1516.72 952.824,1516.72C645.171,1516.72 371.912,1322.45 273.267,1033.32L272.511,1031.05L56.322,1031.05L56.322,1057.13L146.275,1067.71C201.834,1074.14 213.55,1098.71 228.668,1129.7L232.448,1137.26C362.463,1414.67 645.549,1593.82 953.202,1593.82C1260.86,1593.82 1543.94,1414.67 1673.96,1137.63L1677.74,1130.08C1692.85,1099.08 1704.57,1074.52 1760.13,1068.09L1850.08,1057.51L1850.08,1031.43L1633.14,1031.43Z" style="fill-rule:nonzero;"/>
                 </g>
             </g>
-        </g>
-        <g id="Layer_1-2">
         </g>
     </g>
 </svg>

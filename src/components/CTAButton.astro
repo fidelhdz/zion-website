@@ -25,7 +25,7 @@ const { ctaText, ctaLink, idTag } = Astro.props as PROPS;
         margin-top: 50px;
 
         a.cta-button {
-            background-color: var(--zion-cc-red);
+            background-color: var(--zion-cc-black);
             color: var(--zion-cc-white);
             text-decoration: none;
             text-transform: uppercase;
@@ -45,8 +45,8 @@ const { ctaText, ctaLink, idTag } = Astro.props as PROPS;
                 left: -20px;
                 border-left: 10px solid transparent;
                 border-top: 17px solid transparent;
-                border-bottom: 17px solid var(--zion-cc-red);
-                border-right: 10px solid var(--zion-cc-red);
+                border-bottom: 17px solid var(--zion-cc-black);
+                border-right: 10px solid var(--zion-cc-black);
                 transition: all ease-in-out 0.3s;
             }
 
@@ -60,22 +60,22 @@ const { ctaText, ctaLink, idTag } = Astro.props as PROPS;
                 right: -20px;
                 border-right: 10px solid transparent;
                 border-bottom: 17px solid transparent;
-                border-top: 17px solid var(--zion-cc-red);
-                border-left: 10px solid var(--zion-cc-red);
+                border-top: 17px solid var(--zion-cc-black);
+                border-left: 10px solid var(--zion-cc-black);
                 transition: all ease-in-out 0.3s;
             }
 
             &:hover {
-                background-color: var(--zion-cc-black);
+                background-color: var(--zion-cc-red);
                 
                 &::before {
-                    border-bottom-color: var(--zion-cc-black);
-                    border-right-color: var(--zion-cc-black);
+                    border-bottom-color: var(--zion-cc-red);
+                    border-right-color: var(--zion-cc-red);
                 }
 
                 &::after {
-                    border-top-color: var(--zion-cc-black);
-                    border-left-color: var(--zion-cc-black);
+                    border-top-color: var(--zion-cc-red);
+                    border-left-color: var(--zion-cc-red);
                 }
             }
         }
