@@ -6,31 +6,53 @@ import Footer from "./sections/Footer.astro";
 import ContactSection from "./sections/ContactSection.astro";
 import { Breadcrumbs } from "astro-breadcrumbs";
 import 'astro-breadcrumbs/breadcrumbs.scss';
+import SectionContent from "../components/SectionContent.astro";
 ---
 <Layout title="ZION" desc="Description">
 	<InnerHeroSection subTitle="Conozca nuestra historia, nuestros valores y nuestro compromiso" Title="Siempre cerca de la industria" backImg="/assets/images/backgrounds/back-conocenos.jpg" />
 	<Breadcrumbs indexText="Portada" />
+
+	<SectionContent subTitle="haciendo historia desde 1997" Title="Más que una línea de tiempo, una historia de innovación y crecimiento" Covered=false sideImg="/assets/images/zion-logo.png">
+		<Fragment slot="SectionHTML">
+			<p><strong>ZION no es solo una cronología, es una historia de compromiso con la excelencia</strong></p>
+			<ul>
+				<li>De una oficina a una red nacional e internacional, siempre en constante crecimiento.</li>
+				<li>Del proyecto artesanal a la precisión de la gestión, garantizando la calidad en cada paso.</li>
+				<li>De las fronteras de México al mundo, conquistando mercados con soluciones innovadoras.</li>
+				<li>De la semilla a un árbol frondoso, con ramas que abrazan distintas industrias y necesidades.</li>
+			</ul>
+			<p>ZION es hoy un referente en automatización, pero mañana será una historia aún más apasionante. Una historia que se sigue escribiendo con cada cliente, con cada desafío, con cada máquina que cobra vida, impulsada por la pasión por la ingeniería y el compromiso con el progreso.</p>
+		</Fragment>
+	</SectionContent>
+
+	<section class="cronografia">
+		<img src="/assets/images/cronografia-zion.webp" class="desktop-version" alt="Historia de Zion Automation">
+		<img src="/assets/images/cronografia-zion-mobile.webp" class="mobile-version" alt="Historia de Zion Automation">
+	</section>
     
 	<section class="valores-section">
 		<div class="blur-ball"></div>
 		<div class="row">
-			<div class="col-12 col-xl-4">
+			<div class="col-12 col-xl-6">
 				<h3>Misión</h3>
 				<p>
-					ZION Automation se basa en los valores de la excelencia, la innovación y el servicio al cliente. La excelencia es nuestro compromiso de brindar a sus clientes soluciones de automatización de la más alta calidad. La innovación es el de desarrollar nuevas soluciones de automatización que ayuden a las empresas a mejorar sus operaciones. El servicio al cliente es el de brindar a sus clientes un servicio excepcional.
+					Generamos utilidad a través de la innovación de procesos de automatización, siendo una extensión confiable para nuestros clientes.
 				</p>
 			</div>
-			<div class="col-12 col-xl-4">
+			<div class="col-12 col-xl-6">
 				<h3>Visión</h3>
 				<p>
-					ZION Automation se basa en los valores de la excelencia, la innovación y el servicio al cliente. La excelencia es nuestro compromiso de brindar a sus clientes soluciones de automatización de la más alta calidad. La innovación es el de desarrollar nuevas soluciones de automatización que ayuden a las empresas a mejorar sus operaciones. El servicio al cliente es el de brindar a sus clientes un servicio excepcional.
+					Para el 2026, seremos una empresa innovadora en tecnologías de automatización, eficiente en costos y tiempos de entrega, certificada y consolidada.
 				</p>
 			</div>
-			<div class="col-12 col-xl-4">
+			<div class="col-12 col-xl-6 offset-xl-3 mt-5">
 				<h3>Valores</h3>
-				<p>
-					ZION Automation se basa en los valores de la excelencia, la innovación y el servicio al cliente. La excelencia es nuestro compromiso de brindar a sus clientes soluciones de automatización de la más alta calidad. La innovación es el de desarrollar nuevas soluciones de automatización que ayuden a las empresas a mejorar sus operaciones. El servicio al cliente es el de brindar a sus clientes un servicio excepcional.
-				</p>
+				<p><strong>Confiabilidad:</strong> Brindamos seguridad y garantía; cumplimos con nuestras funciones en tiempo y forma.</p>
+				<p><strong>Compromiso:</strong> Cumplimos con lo prometido aún ante circunstancias adversas.</p>
+				<p><strong>Innovación:</strong> Implementamos ideas nuevas para generar valor.</p>
+				<p><strong>Trabajo en equipo:</strong> Colaboramos de manera complementaria, aunando esfuerzos y disponiendo de las competencias de cada miembro del equipo para lograr una meta en común.</p>
+				<p><strong>xConciencia Financiera:</strong> Entendemos y asumimos la realidad  para la toma de decisiones con respecto a los recursos, y que estas tengan un impacto positivo.</p>
+				<p><strong>Empatía:</strong> Tenemos la capacidad de comprender y compartir los sentimientos de los demás, viendo las cosas desde la perspectiva del otro.</p>
 			</div>
 		</div>
 	</section>

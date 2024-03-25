@@ -5,10 +5,12 @@ interface PROPS {
     Reverse?: boolean;
     idBlock?: string;
     sideImg?: string;
+    Covered?: boolean;
 }
 import SectionTitles from './sub_components/SectionTitles.astro';
 
-const { subTitle, Title, idBlock, sideImg, Reverse=false } = Astro.props as PROPS;
+const { subTitle, Title, idBlock, sideImg="/assets/images/back_image.webp", Reverse=false, Covered=true } = Astro.props as PROPS;
+const newClass:string = (Covered !== true) ? 'simple-back' : '';
 ---
 
 <section class="zion-section">
@@ -20,12 +22,7 @@ const { subTitle, Title, idBlock, sideImg, Reverse=false } = Astro.props as PROP
     }
     <div class="row">
         <div class:list={["col-12", "col-xl-6", "zion-image-block", { 'order-xl-last': Reverse }, { 'order-xl-first': !Reverse }]}>
-            {sideImg
-            ?
-            <div class="zion-image-container simple-back" style={{ backgroundImage: `url(${sideImg})` }}></div>
-            :
-            <div class="zion-image-container"></div>
-            }
+            <div class:list={["zion-image-container", newClass]} style={{ backgroundImage: `url(${sideImg})` }}></div>
         </div>
         <div class:list={["col-12", "col-xl-6", { 'order-xl-first': Reverse }, { 'order-xl-last': !Reverse }]}>
             <div class="content-section-text">
