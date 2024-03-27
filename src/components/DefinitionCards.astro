@@ -1,14 +1,15 @@
 ---
 interface PROPS {
     defArray: Array<string>;
+    inColumns?: boolean;
 }
 import Card from "./sub_components/Card.astro";
 
-const {defArray} = Astro.props as PROPS;
+const {defArray, inColumns=false} = Astro.props as PROPS;
 ---
 
 <section class="zion-cards-definition">
-    <div class="row cards-container">
+    <div class:list={["row", "cards-container", { "flex-column": inColumns }]}>
         {
             defArray.map( (val:string) => (
             <Card Title={ val[0] }>

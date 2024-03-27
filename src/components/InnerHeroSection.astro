@@ -12,7 +12,7 @@ const { subTitle, Title, backImg } = Astro.props;
 ---
 <header class="inner-hero" style={{ backgroundImage: `url(${backImg})` }}>
     <NavBar />
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-xl-6">
                 <TextOnHeader subTitle={subTitle} Title={Title} />
@@ -26,6 +26,6 @@ const { subTitle, Title, backImg } = Astro.props;
 <style lang="scss">
     header {
         background-size: cover;
-        background-position: top center;
+        background-position: center center;
     }
 </style>
