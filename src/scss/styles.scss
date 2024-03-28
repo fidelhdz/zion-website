@@ -60,7 +60,7 @@ header {
     background-image: url('/assets/images/backgrounds/back-home.jpg');
     background-size: cover;
     background-position: center center;
-    padding: 60px;
+    padding: 60px 150px;
 
     @media screen and (width <= 1200px) {
         padding: 10px;
@@ -68,7 +68,7 @@ header {
 
     .header-title {
         .contact-items {
-            margin-left: 90px;
+            margin-left: 160px;
             
             @media screen and (width <= 1200px) {
                 margin-left: 0;
@@ -89,7 +89,7 @@ header {
         }
 
         .contact-items {
-            margin-left: 90px;
+            margin-left: 150px;
             
             @media screen and (width <= 1200px) {
                 margin-left: -20px;
@@ -99,7 +99,7 @@ header {
 }
 
 .c-breadcrumbs {
-    padding: 10px 90px;
+    padding: 10px 150px;
     background-color: var(--zion-cc-red);
 
     @media screen and (width <= 1200px) {
@@ -129,6 +129,7 @@ section {
     .zion-image-block {
         position: relative;
         min-height: 550px;
+        overflow: hidden;
 
         @media screen and (width <= 1200px){
             min-height: 400px;
@@ -144,6 +145,7 @@ section {
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            overflow: hidden;
 
             &.contacto-back {
                 background-image: url('/assets/images/contacto.jpg');
@@ -217,7 +219,7 @@ section {
     }
 
     &.cronografia {
-        padding: 0 30px;
+        padding: 0 80px;
         color: var(--zion-cc-white);
         overflow: hidden;
 
@@ -249,7 +251,7 @@ section {
     &.valores-section {
         background-color: var(--zion-cc-black);
         background: linear-gradient(120deg, rgba(62,62,62,1) 0%, rgba(19,19,19,1) 35%);
-        padding: 90px;
+        padding: 90px 150px;
         color: var(--zion-cc-white);
         overflow: hidden;
 
@@ -279,7 +281,7 @@ section {
         background-position: right top;
         background-size: cover;
         color: white;
-        padding: 60px;
+        padding: 60px 90px;
         overflow: hidden;
 
         @media screen and (width <= 1200px) {
@@ -343,7 +345,7 @@ section {
     }
 
     &.internal-links {
-        padding: 60px 90px;
+        padding: 60px 150px;
         position: relative;
         overflow: hidden;
         background-color: var(--zion-cc-black);
@@ -394,7 +396,7 @@ section {
     }
 
     &.zion-wide-section {
-        padding: 60px;
+        padding: 60px 90px;
         background-color: #F5F5F5;
 
         @media screen and (width <= 1200px){
@@ -504,7 +506,7 @@ section {
 
 footer {
     background-color: var(--zion-cc-black);
-    padding: 40px 60px;
+    padding: 40px 90px;
     color: var(--zion-cc-white);
 
     @media screen and (width <= 1200px){

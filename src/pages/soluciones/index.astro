@@ -5,6 +5,7 @@ import SectionContent from "../../components/SectionContent.astro";
 import Footer from "../sections/Footer.astro";
 import ContactSection from "../sections/ContactSection.astro";
 import CTAButton from "../../components/CTAButton.astro";
+import SectionContentVideo from "../../components/SectionContentVideo.astro";
 import { Breadcrumbs } from "astro-breadcrumbs";
 import 'astro-breadcrumbs/breadcrumbs.scss';
 ---
@@ -26,7 +27,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
         </ul>
     </section>
 
-    <SectionContent subTitle="la automatización inteligente a su alcance" Title="Celdas robóticas" idBlock="celdas-roboticas" sideImg="/assets/images/soluciones/celdas-roboticas.jpg">
+    <SectionContentVideo subTitle="la automatización inteligente a su alcance" Title="Celdas robóticas" idBlock="celdas-roboticas" poster="/assets/images/soluciones/celdas-roboticas.jpg" video="/assets/video/video_background.mp4">
 		<Fragment slot="SectionHTML">
             <p>Las células robóticas son sistemas automatizados que combinan robots, equipos periféricos y software de control para realizar una tarea específica. Son una solución de automatización ideal para empresas de todos los tamaños que buscan mejorar la eficiencia, productividad y calidad de sus operaciones.</p>
             <p>
@@ -40,7 +41,7 @@ import 'astro-breadcrumbs/breadcrumbs.scss';
 
             <CTAButton ctaText="Ver más información" ctaLink="/soluciones/celdas-roboticas" />
 		</Fragment>
-	</SectionContent>
+    </SectionContentVideo>
 
     <SectionContent subTitle="la automatización a su medida" Title="Estaciones personalizadas" idBlock="estaciones-personalizadas" Reverse=true sideImg="/assets/images/soluciones/estaciones-personalizadas.jpg">
 		<Fragment slot="SectionHTML">

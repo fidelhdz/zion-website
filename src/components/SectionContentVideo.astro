@@ -1,0 +1,51 @@
+---
+interface PROPS {
+    subTitle?: string;
+    Title: string;
+    Reverse?: boolean;
+    idBlock?: string;
+    poster?: string;
+    video?: string;
+    Covered?: boolean;
+}
+import SectionTitles from './sub_components/SectionTitles.astro';
+
+const { subTitle, Title, idBlock, poster="/assets/images/back_image.webp", video="/assets/video/video_background.mp4", Reverse=false, Covered=true } = Astro.props as PROPS;
+const newClass:string = (Covered !== true) ? 'simple-back' : '';
+---
+
+<section class="zion-section">
+    {idBlock
+    ?
+        <div id={idBlock}></div>
+    :
+        ''
+    }
+    <div class="row">
+        <div class:list={["col-12", "col-xl-6", "zion-image-block", { 'order-xl-last': Reverse }, { 'order-xl-first': !Reverse }]}>
+            <div class:list={["zion-image-container", newClass]}>
+                <video id="background-video" autoplay loop muted poster={poster}>
+                    <source src={video} type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class:list={["col-12", "col-xl-6", { 'order-xl-first': Reverse }, { 'order-xl-last': !Reverse }]}>
+            <div class="content-section-text">
+                <SectionTitles subTitle={subTitle} Title={Title} />
+
+                <slot name="SectionHTML" />
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    #background-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+</style>

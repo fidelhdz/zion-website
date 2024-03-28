@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import InnerHeroSection from "../../components/InnerHeroSection.astro";
 import SectionContent from "../../components/SectionContent.astro";
+import SectionContentVideo from "../../components/SectionContentVideo.astro";
 import Footer from "../sections/Footer.astro";
 import ContactSection from "../sections/ContactSection.astro";
 import SectionIntro from "../../components/SectionIntro.astro";
@@ -28,9 +29,9 @@ const _array = [
 
     <DefinitionCards defArray={_array} />
 
-    <SectionContent Title="Celdas robóticas de Zion Automation" sideImg="/assets/images/soluciones/celdas-roboticas.jpg">
+    <SectionContentVideo Title="Celdas robóticas de Zion Automation" poster="/assets/images/soluciones/celdas-roboticas.jpg" video="/assets/video/video_background.mp4">
 		<Fragment slot="SectionHTML">
-			<p>Las celdas robóticas de ZION ofrecen una serie de beneficios, incluyendo:</p>
+            <p>Las celdas robóticas de ZION ofrecen una serie de beneficios, incluyendo:</p>
             <p>
                 <ul>
                     <li>Mejora de la productividad: Las celdas robóticas pueden aumentar la productividad hasta un 50%.</li>
@@ -42,7 +43,7 @@ const _array = [
             <p>Si está buscando una manera de automatizar sus procesos de producción y mejorar la eficiencia, la calidad y la seguridad de sus operaciones, las celdas robóticas de ZION son una solución que vale la pena considerar.</p>
             <p><a href="#contacto">Solicite una consulta</a> hoy para obtener más información sobre cómo las celdas robóticas de ZION pueden ayudar a su empresa a alcanzar sus objetivos.</p>
 		</Fragment>
-	</SectionContent>
+    </SectionContentVideo>
 
 	<ContactSection />
 
