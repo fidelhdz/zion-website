@@ -158,8 +158,6 @@ import CTAButton from "../../components/CTAButton.astro";
                 prepareData();
             }
 
-            console.log((document.querySelector('#selSolution') as HTMLSelectElement).value);
-
             form.classList.add('was-validated')
             }, false)
         });
@@ -180,8 +178,6 @@ import CTAButton from "../../components/CTAButton.astro";
             };
 
             sendEmail(_data);
-
-            console.log(_data);
         };
         
     })()
